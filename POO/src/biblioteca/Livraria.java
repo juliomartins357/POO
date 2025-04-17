@@ -42,9 +42,11 @@ public class Livraria {
     @Override
     public String toString() {
         return "livraria{" +
-                "titulo\n'" + titulo + '\'' +
-                ", autor\n'" + autor + '\'' +
-                ", anoDepublicacao\n'" + anoDepublicacao + '\'';
+                "\ntitulo'" + titulo + "" +
+                ", \nautor'" + autor + " " +
+                ", \nanoDepublicacao'" + anoDepublicacao;
+
+
 
     }
 }
