@@ -2,10 +2,10 @@ package Prova;
 
 public class Clinica {
     private String nome;
-    private int cpf;
+    private float cpf;
     private String email;
 
-    public Clinica (String nome, int cpf, String email){
+    public Clinica (String nome, float cpf, String email){
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
@@ -22,11 +22,11 @@ public class Clinica {
         this.nome = nome;
     }
 
-    public int getCpf() {
+    public float getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(float cpf) {
         this.cpf = cpf;
     }
 

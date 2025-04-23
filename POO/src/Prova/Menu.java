@@ -7,14 +7,14 @@ public class Menu {
 
     public static void main(String[] args) {
         String nome;
-        int cpf;
+        float cpf;
         String email;
 
         Clinica clinica = new Clinica();
         System.out.println("Digite o o  seu  nome: ");
         clinica.setNome(sc.next());
         System.out.println("Digite qual é o seu CPF: ");
-        clinica.setCpf(sc.nextInt());
+        clinica.setCpf(sc.nextFloat());
         System.out.println("Didite o  seu  email: ");
         clinica.setEmail(sc.next());
 
