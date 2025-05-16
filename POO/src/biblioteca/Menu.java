@@ -8,36 +8,55 @@ public class Menu {
     public static void main(String[] args) {
       String titulo;
       String autor;
-      String anoDepublicacao;
+      int anoDepublicacao;
 
-        Livraria livraria = new Livraria();
+
+
+
+
         System.out.println("Qual o  título do  livro  que vc gostaria de pesquisar?? ");
-        livraria.setTitulo(sc.next());
-        System.out.println("Qual o  título  do  livro?");
-        livraria.setAutor(sc.next());
+       titulo = sc.nextLine();
+        System.out.println("Qual o  autor  do  livro?");
+        autor = sc.nextLine();
         System.out.println("Qual o Ano  de publicação do Livro?? ");
-        livraria.setAnoDepublicacao(sc.next());
+        anoDepublicacao = sc.nextInt();
 
-      Livraria livraria2 = new Livraria();
-        System.out.println("Qual o  título do  livro  que vc gostaria de pesquisar?? ");
-        livraria2.setTitulo(sc.next());
-        System.out.println("Qual o  título  do  livro?");
-        livraria2.setAutor(sc.next());
-        System.out.println("Qual o Ano  de publicação do Livro?? ");
-        livraria2.setAnoDepublicacao(sc.next());
-
-        Livraria livraria3 = new Livraria();
-        System.out.println("Qual o  título do  livro  que vc gostaria de pesquisar?? ");
-        livraria3.setTitulo(sc.next());
-        System.out.println("Qual o  título  do  livro?");
-        livraria3.setAutor(sc.next());
-        System.out.println("Qual o Ano  de publicação do Livro?? ");
-        livraria3.setAnoDepublicacao(sc.next());
+     if(anoDepublicacao <= 1900){
+       System.out.println("Erro!!!!");
+     }else{
+       Livraria livraria1 = new Livraria(titulo,autor,anoDepublicacao);
+       livraria1.observacoes();
+     }
 
 
-        System.out.println(livraria.toString());
-        System.out.println(livraria2.toString());
-        System.out.println(livraria3.toString());
+      System.out.println("Qual o  título do  livro  que vc gostaria de pesquisar?? ");
+      titulo = sc.next();
+      System.out.println("Qual o  autor  do  livro?");
+      autor = sc.next();
+      System.out.println("Qual o Ano  de publicação do Livro?? ");
+      anoDepublicacao = sc.nextInt();
+
+      if(anoDepublicacao <= 1900){
+        System.out.println("Erro!!!!");
+      }else{
+        Livraria livraria2 = new Livraria(titulo,autor,anoDepublicacao);
+        livraria2.observacoes();
+      }
+
+      System.out.println("Qual o  título do  livro  que vc gostaria de pesquisar?? ");
+      titulo = sc.next();
+      System.out.println("Qual o  autor  do  livro?");
+      autor = sc.next();
+      System.out.println("Qual o Ano  de publicação do Livro?? ");
+      anoDepublicacao = sc.nextInt();
+
+      if(anoDepublicacao <= 1900){
+        System.out.println("Erro!!!!");
+      }else{
+        Livraria livraria3 = new Livraria(titulo,autor,anoDepublicacao);
+        livraria3.observacoes();
+      }
+
 
 
     }

@@ -1,60 +1,46 @@
 package Autocar;
 
 public class Veiculo {
-    private int quantidadeRodas;
-    private String chassi;
-    private String marca;
-    private String tipo;
+    private String modeloveiculo;
+    private double quilometragem;
+    private String placa;
 
-   public Veiculo(int quantidadeRodas, String chassi, String marca, String tipo){
-       this.quantidadeRodas = quantidadeRodas;
-       this.chassi = chassi;
-       this.marca = marca;
-       this.tipo = tipo;
+   public Veiculo(String modeloveiculo,double quilometragem, String placa){
+       this.modeloveiculo = modeloveiculo;
+       this.quilometragem = quilometragem;
+       this.placa = placa;
+
    }
-    public Veiculo(){
 
+    public String getModeloveiculo() {
+        return modeloveiculo;
     }
 
-    public int getQuantidadeRodas() {
-        return quantidadeRodas;
+    public void setModeloveiculo(String modeloveiculo) {
+        this.modeloveiculo = modeloveiculo;
     }
 
-    public void setQuantidadeRodas(int quantidadeRodas) {
-        this.quantidadeRodas = quantidadeRodas;
+    public double getQuilometragem() {
+        return quilometragem;
     }
 
-    public String getChassi() {
-        return chassi;
+    public void setQuilometragem(double quilometragem) {
+        this.quilometragem = quilometragem;
     }
 
-    public void setChassi(String chassi) {
-        this.chassi = chassi;
+    public String getPlaca() {
+        return placa;
     }
 
-    public String getMarca() {
-        return marca;
+    public void setPlaca(String placa) {
+        this.placa = placa;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
+    public void observacoes(){
+       System.out.println("Modelo  do  veículo:: " + modeloveiculo);
+       System.out.println("Qilometragem" + quilometragem );
+       System.out.println("Placa" + placa);
+   }
 
-    public String getTipo() {
-        return tipo;
-    }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    @Override
-    public String toString() {
-        return "Veiculo" +
-                "\nquantidadeRodas: " + quantidadeRodas +
-                "\nchassi:'" + chassi + '\'' +
-                "\nmarca " + marca + '\'' +
-                "\ntipo " + tipo + '\'' +
-                '}';
-    }
 }

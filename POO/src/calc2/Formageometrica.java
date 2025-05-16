@@ -20,3 +20,4 @@ public class Formageometrica {
         return 0.0;
     }
 }
+
