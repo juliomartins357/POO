@@ -2,7 +2,8 @@ package calc2;
 
 import java.util.Scanner;
 
-public class Menu {
+public class
+Menu {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {  //funcao / metodo
@@ -105,6 +106,28 @@ public class Menu {
 
                     forma = new Circulo(cor,raio);
                     int opcao2;
+                    do {
+                        opcao2 = menuCalculo();
+
+                        if (opcao2 < 0 || opcao2 > 3) {
+                            System.out.println("Opção Invalida!");
+                        }
+
+                        switch (opcao2) {
+                            case 1: {
+                                System.out.println("Perimetro: " + forma.calculaPerimetro());
+                                break;
+                            }
+                            case 2: {
+                                System.out.println("Area: " + forma.calculaArea());
+                                break;
+                            }
+                            case 3: {
+                                System.out.println("Volume: " + forma.calculaVolume());
+                                break;
+                            }
+                        }
+                    } while (opcao2 != 0);
                 }
             }
         } while (opcao != 0);
@@ -121,6 +144,11 @@ public class Menu {
     }
 
     static public void retornaCalculo(int opcao2, Formageometrica forma) {
+        if (opcao2 < 0 || opcao2 > 3) {
+            System.out.println("Opção Invalida!");
+            return;
+        }
+
         switch (opcao2) {
             case 1: {
                 System.out.println("Perimetro: " + forma.calculaPerimetro());
