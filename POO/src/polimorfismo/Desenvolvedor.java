@@ -24,7 +24,7 @@ public class Desenvolvedor extends Funcionario{
 
     @Override
     public double calcularBonus() {
-        return this.getSalarioBase() * 0.10;
+        return this.getSalariobase() * 0.10;
     }
 
 }
