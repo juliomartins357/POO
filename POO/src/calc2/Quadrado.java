@@ -1,0 +1,34 @@
+package calc2;
+
+public class Quadrado extends Formageometrica{
+    private double lado;
+
+    public Quadrado(String cor, double lado) {
+        super(cor);
+        this.lado = lado;
+    }
+
+    public double getLado() {
+        return lado;
+    }
+
+    public void setLado(double lado) {
+        this.lado = lado;
+    }
+
+    @Override
+    public double calculaArea() {
+        return this.lado * this.lado;
+    }
+
+    @Override
+    public double calculaPerimetro() {
+        return this.lado * 4;
+    }
+
+    @Override
+    public double calculaVolume() {
+        return Math.pow(this.lado, 3); // lada elevado a 3 ou  lado^3
+    }
+
+}

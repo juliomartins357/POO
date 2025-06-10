@@ -5,21 +5,39 @@ import java.util.Scanner;
 public class Menu {
     static Scanner sc =  new Scanner(System.in);
     public static void main(String[] args) {
-        int quantidadeRodas;
-        String chassi;
-        String marca;
-        String tipo;
+        String modelodoveiculo;
+        double quilometragem;
+        String placa;
 
-        Veiculo veiculo = new Veiculo();
+        System.out.println("Digite qual  o  modelo do veículo:");
+        modelodoveiculo = sc.nextLine();
+        sc.nextLine();
+        System.out.println("Digite a quilometragem do  veiculo:");
+        quilometragem = sc.nextDouble();
+        System.out.println("Digite os números e letras da placa:");
+        placa = sc.next();
 
-        System.out.println("Quantidade de Rodas");
-        veiculo.setQuantidadeRodas(sc.nextInt());
-        System.out.println("Chassi");
-        veiculo.setChassi(sc.next());
-        System.out.println("Marca");
-        veiculo.setMarca(sc.next());
-        System.out.println("Tipo");
-        veiculo.setTipo(sc.next());
+        if (quilometragem < 0){
+            System.out.println("A quilometragem tem que ser maior que 0");
+        }else {
+            Veiculo veiculo1 = new Veiculo(modelodoveiculo,quilometragem,placa);
+            veiculo1.observacoes();
+        }
+        sc.nextLine();
+
+        System.out.println("Digite qual  o  modelo do veículo:");
+        modelodoveiculo = sc.nextLine();
+        System.out.println("Digite a quilometragem do  veiculo:");
+        quilometragem = sc.nextDouble();
+        System.out.println("Digite os números e letras da placa:");
+        placa = sc.next();
+
+        if (quilometragem < 0){
+            System.out.println("A quilometragem tem que ser maior que 0");
+        }else {
+            Veiculo veiculo2 = new Veiculo(modelodoveiculo,quilometragem,placa);
+            veiculo2.observacoes();
+        }
 
         Veiculo veiculo2 = new Veiculo();
 
@@ -47,8 +65,11 @@ public class Menu {
 
 
 
+<<<<<<< HEAD
         System.out.println(veiculo.toString());
         System.out.println(veiculo2.toString());
         System.out.println(veiculo3.toString());
+=======
+>>>>>>> 07e1633239a083bad1da9be04be05325c124224c
     }
 }
